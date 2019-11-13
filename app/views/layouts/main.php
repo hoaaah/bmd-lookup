@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -46,6 +46,15 @@ AppAsset::register($this);
                 ['label' => 'Bangunan', 'url' => ['/kib-c']],
                 ['label' => 'JJI', 'url' => ['/kib-d']],
                 ['label' => 'ATL', 'url' => ['/kib-e']],
+            ]],
+            ['label' => 'Permasalahan', 'items' => [
+                ['label' => 'P1', 'url' => ['/permasalahan/p1']],
+                ['label' => 'P2', 'url' => ['/permasalahan/p2']],
+                ['label' => 'P3', 'url' => ['/permasalahan/p3']],
+                ['label' => 'P4', 'url' => ['/permasalahan/p4']],
+                ['label' => 'P5', 'url' => ['/permasalahan/p5']],
+                ['label' => 'P7', 'url' => ['/permasalahan/p7']],
+                ['label' => 'P8', 'url' => ['/permasalahan/p8']],
             ]],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
@@ -74,7 +83,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; <?= Html::a('hoaaah', 'https://belajararief.com', ['target' => '_BLANK']) ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
